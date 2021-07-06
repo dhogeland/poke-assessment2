@@ -1,0 +1,20 @@
+<div class="link-left"
+     (click)="goBack()">
+  BACK
+</div>
+
+<div class="poke-info">
+  <img src="{{pokeInfo.sprites.front_default}}"
+       alt="{{ pokeInfo.name }}">
+       <br>
+       Name: {{ pokeInfo.name }}
+       <br>
+       Weight: {{ pokeInfo.weight }}
+       <br>
+       Generation: {{ pokeInfo.game_indices[0].version.name }}
+       <br>
+       Moves:<span class="poke-moves"
+            *ngFor="let result of pokeInfo.moves; let i = index">
+            {{ result.move.name }}
+       </span>
+</div>

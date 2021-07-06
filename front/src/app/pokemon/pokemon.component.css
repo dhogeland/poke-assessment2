@@ -1,0 +1,11 @@
+.poke-info {
+  text-transform: capitalize;
+}
+
+.poke-moves {
+  flex-wrap: wrap;
+}
+
+img {
+  width: 20em;
+}

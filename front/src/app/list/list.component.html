@@ -1,0 +1,35 @@
+<div class="list-search">
+  <input type="text"
+         name=""
+         [(ngModel)]="name">
+  <button type="button"
+          name="button"
+          class="poke-btn"
+          (click)="getPokeInfoByName(name)">Search</button>
+</div>
+
+<div class="list-container" *ngIf="pokeList">
+  <div class="listed-items"
+       *ngFor="let result of pokeList.results; let i = index"
+       (click)="getPokeInfo(result.url)">
+       <div>
+         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{getUrlInfo(result.url)}}.png"
+              alt="{{ result.name }}">
+         <br>
+              {{ result.name }}
+       </div>
+  </div>
+</div>
+
+<div class="link-container">
+  <div class="link-left"
+       *ngIf="pokeList && pokeList.previous"
+       (click)="getNextPokeList(pokeList.previous)">
+       PREVIOUS
+  </div>
+  <div class="link-right"
+       *ngIf="pokeList && pokeList.next"
+       (click)="getNextPokeList(pokeList.next)">
+       NEXT
+  </div>
+</div>

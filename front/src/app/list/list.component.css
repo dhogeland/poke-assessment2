@@ -1,0 +1,32 @@
+.list-container {
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.listed-items {
+  width: 23em;
+  text-align: center;
+}
+
+.listed-items img {
+  width: 20em;
+}
+
+.poke-btn {
+  width: 10em;
+}
+
+.link-left {
+  float: left;
+  padding: 5em;
+}
+
+.link-right {
+  float: right;
+  padding: 5em;
+}

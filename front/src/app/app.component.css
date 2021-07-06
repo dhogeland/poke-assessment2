@@ -1,0 +1,9 @@
+.link-left {
+  float: left;
+padding: 5em;
+}
+
+.link-right {
+  float: right;
+  padding: 5em;
+}
